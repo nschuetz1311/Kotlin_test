@@ -39,3 +39,6 @@ hs_err_pid*
 .externalNativeBuild
 .cxx
 local.properties
+
+# gradle wrapper should not be ignored
+!gradle/wrapper/gradle-wrapper.jar
