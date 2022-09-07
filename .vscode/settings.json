@@ -1,0 +1,9 @@
+{
+    "editor.renderWhitespace": "trailing",
+    "editor.rulers": [
+        100,
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+}
