@@ -21,3 +21,19 @@ jobs:
         uses: vroy/gha-kotlin-linter@v4
         # with:
           # A list of patterns to pass along to the ktlint command
+
+  Build:
+    runs-on: ubuntu-latest
+    needs: Lint
+    steps:
+      - name: Get Repo
+        uses: actions/checkout@v3
+      - name: Set Up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Run Tests
+        run: ./gradlew test
+        
+      - name: Build Project
+        run: ./gradlew assemble
